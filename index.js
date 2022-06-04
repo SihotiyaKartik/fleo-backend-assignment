@@ -5,6 +5,7 @@ const createRoute = require("./routes/create");
 const getParentRoute = require("./routes/getParent");
 const updateRoute = require("./routes/update");
 const deleteRoute = require("./routes/delete");
+const getDataRoute = require("./routes/getData");
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use("/api",createRoute);
 app.use("/api", getParentRoute);
 app.use("/api", updateRoute);
 app.use("/api", deleteRoute);
+app.use("/api", getDataRoute);
 
 app.listen(process.env.PORT_NO, () => {
     console.log(`server is running on port number ${process.env.PORT_NO}`)
